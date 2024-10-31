@@ -1,0 +1,112 @@
+<!Doctype htm>
+<html lang="es">
+<head>
+      <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Menú de Navegación</title>
+	  <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu {
+            background-color: #333;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            top: 0;
+        }
+        .menu button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .menu button:hover {
+            background-color: #777;
+        }
+        .content {
+            margin-top: 60px;
+            width: 80%;
+            max-width: 800px;
+        }
+        section {
+            margin-bottom: 50px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            margin-top: 0;
+        }
+ </style>
+   </head>
+   <body>
+
+    <div class="menu">
+    <button onclick="mostrarSeccion('texto')">Texto</button>
+    <button onclick="mostrarSeccion('imagen')">Imagen</button>
+    <button onclick="mostrarSeccion('video')">Vídeo</button>
+    <button onclick="mostrarSeccion('archivo')">Archivo</button>
+   </div>
+
+   <div class="content">
+   <section id="texto">
+    <h2>Texto</h2>
+    <p>
+       La astronomía estudia los cuerpos celestes y los fenómenos cósmicos que se manifiestan en el universo. Su ámbito de investigación abarca desde estrellas y planetas cercanos hasta galaxias distantes,las estrellas constituyen uno de sus principales objetos de estudio. Los astrónomos investigan la formación, evolución y extinción de las estrellas, así como las distintas fases de su ciclo de vida. 
+    </p>
+    <p>
+       La exploración de los planetas es otra área central de la astronomía, estos estudios incluyen los planetas del sistema solar y también exoplanetas en otras galaxias. La comprensión de la formación y las características de los planetas aporta información sobre la dinámica de los sistemas solares y las posibilidades del desarrollo de vida en otros lugares del universo.
+    </p>
+    <p>
+        La astronomía también se enfoca en el análisis de las galaxias, las nebulosas y otros objetos celestes, como los agujeros negros, las estrellas de neutrones y los cuásares. El estudio de estos fenómenos extraños que suceden en el espacio contribuye a la comprensión de leyes fundamentales de la física y la naturaleza del espacio y del tiempo.
+    </p>
+    <p>
+      Para observar la bóveda celeste y las constelaciones más conocidas no hará falta ningún instrumento, para observar cometas o algunas nebulosas solo serán necesarios unos prismáticos, los grandes planetas se ven a simple vista; pero para observar detalles de los discos de los planetas del sistema solar o sus satélites mayores bastará con un telescopio simple. 
+	  Si se quiere observar con profundidad y exactitud determinadas características de los astros, se requieren instrumentos que necesitan de la precisión y tecnología de los últimos avances científicos.
+    </p>
+</section>
+
+</section>
+
+    <section id="imagen" style="display:none;">
+        <h2>Imagen</h2>
+        <img src="https://static.wikia.nocookie.net/eswikia/images/3/32/Astronom%C3%ADa.png/revision/latest/scale-to-width-down/594?cb=20160819193438" alt="Imagen de ejemplo" style="width:100%; height:auto;">
+    </section>
+	
+	<section id="video" style="display:none;">
+        <h2>Vídeo</h2>
+        <video width="100%" controls>
+            <source src="https://www.youtube.com › watch.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </section>
+
+    <section id="archivo" style="display:none;">
+        <h2>Archivo</h2>
+        <a href="https://cab.inta-csic.es/users/CONSOLIDER/historia_astronomia.pdf" download="ejemplo.pdf">
+            Haz clic aquí para descargar un archivo PDF.
+        </a>
+    </section>
+</div>
+
+<script>
+    function mostrarSeccion(seccionId) {
+        const secciones = document.querySelectorAll('section');
+        secciones.forEach(section => section.style.display = 'none');
+        document.getElementById(seccionId).style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
